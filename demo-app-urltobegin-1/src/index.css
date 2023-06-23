@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+
+    font-size: 10pt !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    background-color: rgb(53, 60, 71) !important; /* customer dark */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.explain {
+    background-color: rgb(33, 40, 51); /* customer deep dark */
+    border-radius: 4px;
+    color: #FFF;
+    margin: 0px 10px 20px 10px; padding: 15px;
+}
+.explain .title { font-size: 1.2em; font-weight: 800; }
+.explain .subtitle { font-size: 0.9em; margin-top: 10px; margin-bottom: 20px; }
+.explain li { font-size: 0.9em; margin-bottom: 5px; }
+.explain .use-common-sense { font-size: 0.8em; border-left: 1px dashed #EEF; padding-left: 15px; margin-bottom: 10px; }
+
+.customer-app {
+    background-color: #FFF;
+    border: 2px solid rgb(33, 40, 51); /* customer deep dark */
+    border-radius: 4px;
+    margin: 20px 10px;
+}
+
+.customer-app-form { padding: 15px; }
+.customer-app-banner {
+    background-color: #FF7D2A; /* fake customer color */
+    color: #FFF;
+    font-size: 1.1em; font-weight: 800 !important;
+    box-sizing: border-box;
+    padding: 15px;
+    border-bottom: 4px solid #EF6D1A;
+}
+
+.form-label { margin-bottom: 2px !important; }
+
