@@ -53,7 +53,7 @@ _Execute locally (localhost:3000)_
 
 3. Navigate into the project directory:
    ```sh
-   cd Demo-App-React-ExpressJS
+   cd Demo-Verify-React-Web
    ```
 
 4. Build and run the project using Docker Compose:
