@@ -46,7 +46,7 @@ _Execute locally (localhost:3000)_
 
 1. Clone the repository 
    ```sh
-   git clone https://github.com/jydingClear/Demo-App-React-ExpressJS.git
+   git clone https://github.com/poweredbyclear/Demo-Verify-React-Web.git
    ```
    
 2. Update `.env` file (lives in the base project directory). Input a your `REACT_APP_CLIENT_ID`, `REACT_APP_SCOPE`, `CLIENT_SECRET`, `API_KEY`, `CLEAR_AUTH_URL` and `CLEAR_BACKEND_SERVICE`
