@@ -49,7 +49,7 @@ _Execute locally (localhost:3000)_
    git clone https://github.com/poweredbyclear/Demo-Verify-React-Web.git
    ```
    
-2. Update `.env` file (lives in the base project directory). Input a your `REACT_APP_CLIENT_ID`, `REACT_APP_SCOPE`, `CLIENT_SECRET`, `API_KEY`, `CLEAR_AUTH_URL` and `CLEAR_BACKEND_SERVICE`
+2. Update `.env` file (lives in the base project directory). Input your `REACT_APP_CLIENT_ID`, `REACT_APP_SCOPE`, `CLIENT_SECRET`, `API_KEY`, `CLEAR_AUTH_URL` and `CLEAR_BACKEND_SERVICE`
 
 3. Navigate into the project directory:
    ```sh
