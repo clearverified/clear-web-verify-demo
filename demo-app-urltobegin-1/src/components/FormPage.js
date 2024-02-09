@@ -6,7 +6,8 @@ const getVerificationURL = () => {
   const clientId = process.env.REACT_APP_CLIENT_ID;
   const redirectURI = process.env.REACT_APP_REDIRECT_URI;
   const scope = process.env.REACT_APP_SCOPE;
-  const env = process.env.REACT_APP_ENV;
+  const env = "partner";
+  const email = localStorage.getItem('email')
 
   console.log('env: '+env)
   let baseURL = 'https://verify.partner.platform.clearme.com/';
@@ -23,7 +24,7 @@ const getVerificationURL = () => {
   params.append('redirectURI', redirectURI);
   params.append('scope', scope);
   params.append('state', state);
-
+  params.append('loginHint', email);
   const url = new URL(baseURL);
   url.search = params.toString();
 
@@ -47,6 +48,7 @@ const FormPage = () => {
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
   const [zipCode, setZipCode] = useState('');
+  const [email, setEmail] = useState('');
 
   const redirectToWebsite = () => {
     localStorage.setItem('firstName', firstName);
@@ -54,6 +56,7 @@ const FormPage = () => {
     localStorage.setItem('address', address);
     localStorage.setItem('city', city);
     localStorage.setItem('zipCode', zipCode);
+    localStorage.setItem('email', email);
 
 
     const url = getVerificationURL();
@@ -79,6 +82,10 @@ const FormPage = () => {
 
   const handleZipCodeChange = (e) => {
     setZipCode(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
   };
 
   return (
@@ -137,13 +144,25 @@ const FormPage = () => {
         </div>
 
         <div className="mb-3">
-          <label htmlFor="city" className="form-label">Zip Code:</label>
+          <label htmlFor="zipCode" className="form-label">Zip Code:</label>
           <input
             className="form-control"
             id="zipCode"
             name="zipCode"
             value={zipCode}
             onChange={handleZipCodeChange}
+            required
+          />
+        </div>
+
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">Email (Optional):</label>
+          <input
+            className="form-control"
+            id="email"
+            name="email"
+            value={email}
+            onChange={handleEmailChange}
             required
           />
         </div>
